@@ -1,6 +1,4 @@
 FROM golang AS builder
-# Install Git and Glide
-RUN apt-get update && apt-get install -y git golang-glide
 # Install dep
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 # Clone and build Helm 3
