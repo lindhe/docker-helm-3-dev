@@ -1,6 +1,4 @@
 FROM golang AS builder
-# Install dep
-RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 # Clone and build Helm 3
 RUN git clone https://github.com/helm/helm.git /go/src/helm.sh/helm
 WORKDIR /go/src/helm.sh/helm/
