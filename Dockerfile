@@ -9,5 +9,4 @@ FROM alpine
 RUN apk update && apk add libc6-compat
 COPY --from=builder /go/src/helm.sh/helm/bin/helm /usr/local/bin/
 USER nobody
-ENTRYPOINT ["/usr/local/bin/helm"]
 
