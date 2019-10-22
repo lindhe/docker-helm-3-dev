@@ -1,6 +1,6 @@
 FROM golang AS builder
 # Clone and build Helm 3
-RUN git clone --branch dev-v3 --depth 1 https://github.com/helm/helm.git /go/src/helm.sh/helm
+RUN git clone --branch master --depth 1 https://github.com/helm/helm.git /go/src/helm.sh/helm
 WORKDIR /go/src/helm.sh/helm/
 RUN make
 # When make is done, the path to the binary is /go/src/helm.sh/helm/bin/helm
